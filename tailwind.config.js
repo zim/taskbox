@@ -10,6 +10,7 @@ module.exports = {
         "base-green": "#0B7C84",
         "hover-green": "#086066",
         "active-green": "#06484D",
+        "mid-green": "#D2EFF1",
       },
       fontSize: {
         sm10: "10px",

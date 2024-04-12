@@ -7,7 +7,9 @@ export default function Task({
   onPinTask,
 }) {
   return (
-    <div className={`list-item ${state} rounded-full`}>
+    <div
+      className={`list-item bg-mid-green ${state} border-[1px] rounded-md hover:border-base-green hover:border-[1px] cursor-pointer`}
+    >
       <label
         htmlFor="checked"
         aria-label={`archiveTask-${id}`}
