@@ -25,6 +25,198 @@
   .storybook-button--secondary {
     @apply flex items-center bg-gray-500 hover:bg-gray-700 text-white py-2 px-4 m-0.5 text-sm rounded-md
   }
+
+
+  .btn {
+    @apply bg-gray-500 hover:bg-gray-700 text-white py-2 px-4 m-0.5 text-sm rounded-md
+  }
+
+  .btn-panel-close {
+    @apply absolute flex justify-center items-center w-8 h-8 rounded-full right-[-16px] top-[32px] rotate-90 border-[1px] border-light-gray bg-dark-white cursor-pointer transition-all ease-out delay-75 duration-[400ms] z-10 hover:border-base-green hover:bg-white hover:shadow-[0px_3px_6px_#17182326]
+  }
+
+  .btn-panel-open {
+    @apply absolute flex justify-center items-center w-8 h-8 rounded-full right-[-16px] top-[32px] -rotate-90 border-[1px] border-light-gray bg-dark-white cursor-pointer transition-all ease-out delay-75 duration-[400ms] z-10 hover:border-base-green hover:bg-white hover:shadow-[0px_3px_6px_#17182326]
+  }
+
+  /* SideBar Button Styles */
+  .btn-side {
+    @apply bg-gray-500 text-white py-2 px-4 m-0.5 text-sm 
+  }
+
+  .btn-side-panel-close {
+    @apply relative flex justify-center items-center rounded-full m-0 p-0 rotate-90 bg-new-gray cursor-pointer transition-all ease-out delay-75 duration-[400ms] z-10 
+  }
+
+  .btn-side-panel-open {
+    @apply relative flex justify-center items-center rounded-full m-0 p-0 -rotate-90 bg-new-gray cursor-pointer transition-all ease-out delay-75 duration-[400ms] z-10 
+  }
+
+  .btn-side > svg {
+    @apply w-[18px] h-[18px]
+  }
+
+  /* Button Arrow Transition Styles */
+  .btn-arrow{
+    @apply outline outline-1 outline-red-500 flex items-center pl-[16px] pr-[16px] w-fit mb-3
+  }
+  .btn-arrow:hover >p{
+    @apply text-dark-green
+  }
+
+  /* End Button Arrow Transition Styles */
+
+  /* Notes List Item Styles */
+  .notes-list-item {
+    @apply flex w-full px-[8px] py-[8px] bg-white border-[1px] border-white rounded cursor-pointer transition-all ease-in duration-[100ms]
+  }
+
+  .notes-list-item>.notes-list-item-inner {
+    @apply flex w-full pl-[8px] pr-[16px] py-[8px] bg-light-green border-[1px] border-light-green rounded transition-all ease-in duration-[100ms]
+  }
+
+  .notes-list-item>.notes-list-item-inner>div:first-child {
+    @apply flex pr-[8px]
+  }
+
+  .notes-list-item>.notes-list-item-inner>div:first-child>div:first-child {
+    @apply w-[32px] h-[32px] p-[8px] cursor-pointer border-[1px] border-white rounded-md hover:bg-hover-gray hover:border-[1px] hover:border-border-gray
+  }
+
+  .notes-list-item>.notes-list-item-inner>div:last-child {
+    @apply flex flex-col w-full
+  }
+
+  .notes-list-item>.notes-list-item-inner>div:last-child>div:first-child {
+    @apply flex justify-between mb-[3px]
+  }
+
+  .notes-list-item>.notes-list-item-inner>div:last-child>div:nth-child(2) {
+    @apply flex justify-between mb-[6px]
+  }
+
+  .notes-list-item>.notes-list-item-inner>div:last-child>div:last-child {
+    @apply flex justify-between
+  }
+
+  .notes-list-item:hover>.notes-list-item-inner {
+    @apply border-[#4ABEC6]
+  }
+
+  /* item on */
+  .notes-list-item.notes-list-item-on {
+    @apply flex w-full px-[8px] py-[8px] bg-white border-[1px] border-dark-green rounded transition-all ease-in duration-[100ms]
+  }
+
+  .notes-list-item.notes-list-item-on>.notes-list-item-inner {
+    @apply flex w-full pl-[8px] pr-[16px] py-[8px] bg-white border-[1px] border-white rounded transition-all ease-in duration-[100ms]
+  }
+
+  /* END Notes List Item Styles */
+
+  /* Message List Item Styles */
+  .message-list-item {
+    @apply flex w-full
+  }
+
+  .message-list-item.message-list-item-you {
+    @apply justify-start
+  }
+
+  .message-list-item.message-list-item-you>div:first-child {
+    @apply mb-4 mr-4 bg-white border-[1px] border-message-green rounded-t-lg rounded-r-lg p-4 w-2/3
+  }
+  .message-list-item.message-list-item-you.side-closed>div:first-child {
+    @apply mb-4 mr-4 bg-white border-[1px] border-message-green rounded-t-lg rounded-r-lg p-4 w-[92%]
+  }
+  /* .message-list-item.message-list-item-you>div:first-child>div:first-child {
+    @apply mb-4 mr-4 bg-red-400 border-[1px] border-message-green rounded-t-lg rounded-r-lg p-4 w-2/3
+  } */
+  .message-list-item.message-list-item>div.message-list-content>div.message-item-header {
+    @apply flex justify-between mb-3
+  }
+  /* .message-list-item.message-list-item-you>div.message-list-content>div.message-item-header {
+    @apply  bg-red-400
+  }
+  .message-list-item.message-list-item-you>div.message-list-content>div.message-item-header>div:first-child {
+    @apply  bg-green-400
+  } */
+  .message-list-item.message-list-item-you>div.message-list-content>div.message-item-header>div:last-child {
+    @apply  items-center
+  }
+
+  /* me */
+  .message-list-item.message-list-item-me {
+    @apply justify-end
+  }
+
+  .message-list-item.message-list-item-me>div:first-child>div:first-child>div:first-child>p {
+    @apply   text-dark-gray
+  }
+
+  .message-list-item.message-list-item-me>div:first-child {
+    @apply mb-4 mr-4 bg-message-green border-[1px] border-message-green-border rounded-t-lg rounded-l-lg p-4 w-2/3
+  }
+  .message-list-item.message-list-item-me.side-closed>div:first-child {
+    @apply mb-4 mr-4 bg-message-green border-[1px] border-message-green-border rounded-t-lg rounded-l-lg p-4 w-[92%]
+  }
+
+  .message-list-item.message-list-item-me:last-child>div:first-child {
+    @apply mb-4 mr-4 bg-message-green border-[1px] border-dark-green rounded-t-lg rounded-l-lg p-4 w-2/3
+  }
+  .message-list-item:last-child>div:first-child {
+    @apply  border-dark-green shadow-[2px_2px_3px_#01272A1A]
+    
+  }
+
+  /* END Message List Item Styles */
+
+  .btn-list {
+    @apply text-dark-gray py-[13px] px-4 mx-4 text-txt10 font-medium rounded-md text-left border-[1px] border-transparent cursor-pointer hover:bg-hover-gray hover:border-[1px] hover:border-hover-border
+  }
+
+  .btn-list.closed {
+    @apply translate-x-36
+  }
+
+  .btn-list-on {
+    @apply bg-hover-gray text-base-green py-[13px] px-4 mx-4 text-txt10 font-medium rounded-md text-left border-[1px] border-base-green cursor-pointer shadow-[0px_3px_6px_#D2EFF1]
+  }
+
+
+  .card-title {
+    @apply text-dark-gray py-4 px-8 text-xs font-semibold border-b-[1px] border-light-gray
+  }
+
+  .sidePanel {
+    @apply w-[368px] transition-all ease-in-out delay-75 duration-[200ms] border-r-[1px] border-light-gray
+  }
+
+  .sidePanel.closed {
+    @apply w-[48px]
+  }
+
+  /* ICON HOVER BUTTON */
+  .icon-hover-black>svg{
+    @apply fill-dark-green
+  }
+  .icon-hover-black:hover>svg{
+    @apply fill-black
+  }
+  /* .icon-hover-black>svg>path{
+    @apply fill-red-50
+  } */
+
+  .storybook-icon {
+@apply mt-[40px] ml-[40px] w-fit p-[6px] border-[1px] border-transparent rounded-md flex cursor-pointer  icon-hover-black relative duration-300 hover:bg-hover-gray hover:border-hover-gray hover:border-[1px]
+  }
+.storybook-icon--primary {
+@apply   hover:border-base-green hover:border-[1px]
+  }
+   /* 
+  .storybook-icon--secondary {
+@apply  hover:bg-hover-gray hover:border-hover-gray hover:border-[1px]
+  } */
 }
 
 body {
@@ -55,6 +247,7 @@ body {
   -ms-text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; */
+  font-family: "Poppins", Georgia, Cambria, "Times New Roman", Times, serif;
 }
 
 h1,
@@ -72,7 +265,8 @@ label {
   vertical-align: middle;
   line-height: normal;
   overflow: visible;
-  font-family: "Nunito Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  /* font-family: "Nunito Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; */
+  font-family: "Poppins", Georgia, Cambria, "Times New Roman", Times, serif;
 }
 
 button::-moz-focus-inner,
@@ -110,7 +304,7 @@ input[type="submit"] {
   }
 }
 
-@font-face {
+/* @font-face {
   font-family: "Nunito Sans";
   font-style: italic;
   font-weight: 400;
@@ -132,20 +326,20 @@ input[type="submit"] {
   font-weight: 800;
   src: url(https://fonts.gstatic.com/s/nunitosans/v6/pe03MImSLYBIv1o4X1M8cc8aBc5tU1Q.ttf)
     format("truetype");
-}
+} */
 
 .type-light {
-  font-family: "Nunito Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  /* font-family: "Nunito Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; */
   font-weight: 300;
 }
 
 .type-bold {
-  font-family: "Nunito Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  /* font-family: "Nunito Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; */
   font-weight: 800;
 }
 
 .type-italic {
-  font-family: "Nunito Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  /* font-family: "Nunito Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; */
   font-weight: 400;
   font-style: italic;
 }
@@ -156,7 +350,7 @@ input[type="password"],
 textarea {
   font-size: 14px;
   line-height: 20px;
-  font-family: "Nunito Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  /* font-family: "Nunito Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; */
   font-style: 400;
   padding: 0.75rem 0;
   line-height: 1.5rem !important;
@@ -264,7 +458,7 @@ textarea {
   font-style: normal;
 }
 
-[class^="icon-"],
+/* [class^="icon-"],
 [class*=" icon-"] {
   font-family: "percolate";
 
@@ -273,7 +467,7 @@ textarea {
   font-variant: normal;
   text-transform: none;
   line-height: 1;
-}
+} */
 
 .icon-star:before {
   content: "\e608";
@@ -291,7 +485,7 @@ textarea {
   letter-spacing: 0.3em;
   text-indent: 0.3em;
   text-transform: uppercase;
-  font-family: "Nunito Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  /* font-family: "Nunito Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; */
   font-weight: 800;
   font-size: 11px;
   padding-left: 15px;
@@ -452,7 +646,7 @@ textarea {
 .wrapper-message .title-message {
   font-size: 16px;
   line-height: 24px;
-  font-family: "Nunito Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  /* font-family: "Nunito Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; */
   font-weight: 800;
   color: #4a5568;
 }
@@ -486,7 +680,7 @@ textarea {
   line-height: 2rem;
   cursor: pointer;
   white-space: nowrap;
-  font-family: "Nunito Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  /* font-family: "Nunito Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; */
   overflow: hidden;
   text-overflow: ellipsis;
   font-weight: 800;
