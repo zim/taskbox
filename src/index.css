@@ -1,3 +1,39 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,900");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap"); */
+
+/* @layer base {
+  h1 {
+    @apply text-sm text-base-green font-medium mt-1
+  }
+
+  h2 {
+    @apply text-sm text-dark-gray font-bold
+  }
+} */
+
+@layer components {
+  .storybook-button--primary {
+    @apply flex items-center bg-base-green hover:bg-hover-green active:bg-active-green text-white py-3 px-4 m-0.5 text-sm rounded-md
+  }
+  /* .storybook-button--primary  {
+    @apply mr-3
+  } */
+  .storybook-button--secondary {
+    @apply flex items-center bg-gray-500 hover:bg-gray-700 text-white py-2 px-4 m-0.5 text-sm rounded-md
+  }
+}
+
+body {
+  margin: 0;
+  font-family: "Poppins", Georgia, Cambria, "Times New Roman", Times, serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 * {
   box-sizing: border-box;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -8,17 +44,17 @@ html,
 body {
   margin: 0;
   padding: 0;
-  font-size: 100%;
+  /* font-size: 100%; */
   outline: none;
-  font-family: "Nunito Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-style: 400;
+  /* font-family: "Nunito Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; */
+  /* font-style: 400;
   color: #333;
   font-size: 16px;
   background-color: #26c6da;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  -moz-osx-font-smoothing: grayscale; */
 }
 
 h1,
@@ -272,6 +308,7 @@ textarea {
 }
 
 .list-item {
+  border: 1px solid gray;
   font-size: 14px;
   line-height: 20px;
   display: flex;
@@ -457,4 +494,4 @@ textarea {
   display: inline-block;
   vertical-align: top;
   max-width: 100%;
-}
+} 

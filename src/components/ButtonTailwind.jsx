@@ -1,28 +1,56 @@
 import React from "react";
 import PropTypes from "prop-types";
-import "./button.css";
-import IconCross from "./assets/IconCross";
+// import "./button.css";
+import IconCross from "../stories/assets/IconCross";
 
 /**
  * Primary UI component for user interaction
  */
-export const Button = ({
+export const ButtonTailwind = ({
   primary,
   backgroundColor,
   size,
   label,
   icon,
+  variant,
   ...props
 }) => {
   const mode = primary
     ? "storybook-button--primary"
     : "storybook-button--secondary";
+
+  console.log(variant);
+
+  const modeClass = (variant) => {
+    console.log("modeClass = (variant) ==== ", variant);
+    let btnModeClass;
+    // let btnSendSpanClass;
+    // let stateLabel;
+
+    switch (variant) {
+      case "primary":
+        btnModeClass = "storybook-button--primary";
+        break;
+      case "secondary":
+        btnModeClass = "storybook-button--secondary";
+        break;
+
+      default:
+        btnModeClass = "storybook-button--primary";
+        break;
+    }
+
+    return { btnModeClass };
+  };
+
   return (
     <button
       type="button"
-      className={["storybook-button", `storybook-button--${size}`, mode].join(
-        " "
-      )}
+      className={[
+        "storybook-button",
+        `storybook-button--${size}`,
+        modeClass(variant).btnModeClass,
+      ].join(" ")}
       style={backgroundColor && { backgroundColor }}
       {...props}
     >
@@ -36,7 +64,7 @@ export const Button = ({
   );
 };
 
-Button.propTypes = {
+ButtonTailwind.propTypes = {
   /**
    * Is this the principal call to action on the page?
    */
@@ -59,7 +87,7 @@ Button.propTypes = {
   onClick: PropTypes.func,
 };
 
-Button.defaultProps = {
+ButtonTailwind.defaultProps = {
   backgroundColor: null,
   primary: false,
   size: "medium",

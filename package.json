@@ -14,8 +14,10 @@
   "license": "MIT",
   "private": true,
   "dependencies": {
+    "@reduxjs/toolkit": "^2.2.3",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-redux": "^9.1.0"
   },
   "scripts": {
     "dev": "vite",
@@ -23,26 +25,36 @@
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
+    "test-storybook": "test-storybook",
     "init-msw": "msw init public/"
   },
   "devDependencies": {
+    "@storybook/addon-a11y": "^7.6.16",
     "@storybook/addon-essentials": "^7.6.6",
-    "@storybook/addon-interactions": "^7.6.6",
+    "@storybook/addon-interactions": "^7.6.17",
     "@storybook/addon-links": "^7.6.6",
     "@storybook/blocks": "^7.6.6",
+    "@storybook/icons": "^1.2.9",
     "@storybook/react": "^7.6.6",
     "@storybook/react-vite": "^7.6.6",
-    "@storybook/test": "^7.6.6",
+    "@storybook/test": "^7.6.17",
+    "@storybook/test-runner": "^0.17.0",
     "@types/react": "^18.0.28",
     "@types/react-dom": "^18.0.11",
     "@vitejs/plugin-react": "^3.1.0",
+    "autoprefixer": "^10.4.19",
     "msw": "^1.2.1",
     "msw-storybook-addon": "^1.10.0",
+    "postcss": "^8.4.38",
     "prop-types": "^15.8.1",
     "storybook": "^7.6.6",
+    "tailwindcss": "^3.4.3",
     "vite": "^4.2.0"
   },
   "resolutions": {
     "jackspeak": "2.1.1"
+  },
+  "msw": {
+    "workerDirectory": "public"
   }
 }
