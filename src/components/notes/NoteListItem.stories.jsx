@@ -13,13 +13,32 @@ export default {
   },
 };
 
+export const Default = {
+  args: {
+    item: {
+      user: "Zimmy Segal",
+      requestId: "0000001",
+      role: "Admin",
+      location: "London",
+      messageContent:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      startDate: new Date("August 08, 2023 08:00:00"),
+    },
+  },
+};
+
 // More on writing stories with args: https://storybook.js.org/docs/react/writing-stories/args
 export const Primary = {
   args: {
-    // variant: "primary",
-    // primary: true,
-    // icon: false,
-    // label: "Button",
+    item: {
+      user: "Zimmy Segal",
+      requestId: "0000001",
+      role: "Admin",
+      location: "London",
+      messageContent:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      startDate: new Date("August 08, 2023 08:00:00"),
+    },
   },
 };
 

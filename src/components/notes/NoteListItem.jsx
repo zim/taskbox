@@ -1,7 +1,17 @@
 import React, { useState, useEffect } from "react";
 import IconViewRequest from "../../assets/icon/IconViewRequest";
 
-const NoteListItem = ({ item, handleClickNoteItem, activeMessageId }) => {
+// export default function Task({
+//   task: { id, title, state },
+//   onArchiveTask,
+//   onPinTask,
+// })
+
+const NoteListItem = ({
+  item: { user, requestId, role, location, messageContent, startDate },
+  handleClickNoteItem,
+  activeMessageId,
+}) => {
   // const {
   //   user,
   //   requestId,
@@ -55,24 +65,25 @@ const NoteListItem = ({ item, handleClickNoteItem, activeMessageId }) => {
         </div>
         <div className="">
           <div className="">
-            <p className="text-base-blue text-txt11">Request: requestId</p>
+            <p className="text-base-blue text-txt11">Request: {requestId}</p>
             <p className="text-medium-gray text-txt10">
-              {/* {startDate.toLocaleDateString("en-US")},{" "}
+              {startDate.toLocaleDateString("en-US")},{" "}
               {startDate.toLocaleTimeString("en-US", {
                 hour: "numeric",
                 minute: "2-digit",
-              })} */}
-              Dtae
+              })}
             </p>
           </div>
           <div className="">
-            <p className="text-dark-gray font-semibold text-txt10">user</p>
-            <p className="text-medium-gray text-txt10">role | location</p>
+            <p className="text-dark-gray font-semibold text-txt10">{user}</p>
+            <p className="text-medium-gray text-txt10">
+              {role} | {location}
+            </p>
           </div>
           <div className="">
             <p className="text-dark-gray text-txt10">
               {/* {messageContent?.substring(0, 50)}... */}
-              <p>Lorem Message contenet hered.</p>
+              <p>{messageContent}</p>
             </p>
             <p className="flex items-center justify-center bg-base-green text-white text-txt10 font-semibold rounded-full h-6 w-6">
               2
